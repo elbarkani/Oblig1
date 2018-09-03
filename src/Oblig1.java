@@ -9,8 +9,8 @@ public class Oblig1 {
         maks(a);
     }
 
-    public static void maks(int[] a){
-        if (a.length < 0)
+    public static int maks(int[] a){
+        if (a.length < 1)
         {
             throw new IllegalArgumentException("Illegalt intervall!");
         }
@@ -24,9 +24,15 @@ public class Oblig1 {
                 a[i + 1] = temp;
             }
         }
+
+
         System.out.println("Tabell etter inversjon: " + Arrays.toString(a));
         System.out.println("Største verdi i tabell: " + a[a.length-1]);
 
+        return a[a.length-1];
+
     }
+
+
 
 }
